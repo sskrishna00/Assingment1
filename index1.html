@@ -1,0 +1,159 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            border: 2px solid black;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f0f0f0;
+            padding: 5px;
+            height:auto;
+            width:99%;
+            border: 2px solid black;
+        }
+        .header img {
+            width: 80px;
+            height: 50px;
+            border: 1px solid black;
+        }
+        .header div {
+            display: flex;
+            align-items: center;
+        }
+        .header div a {
+            margin-left: 10px;
+            text-decoration: none;
+            color: #2b0fcb;
+            font-weight: bold;
+            border: 1px solid black;
+            padding: 5px;
+        }
+        .header a:last-child {
+            border: 1px solid black;
+            padding: 5px;
+        }
+        .welcome-message {
+            position: relative;
+            text-align: center;
+            color: rgba(243, 244, 246, 0.819);
+            border: 1px solid black;
+            height: 50vh; /* Adjust height relative to viewport */
+            min-height: 300px; /* Ensure a minimum height */
+            overflow: hidden;
+        }
+        .welcome-message img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.5;
+        }
+        .welcome-message::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('Background.jpeg') center/cover no-repeat;
+            opacity: 0.7;
+            z-index: 0;
+        }
+        .welcome-message h1 {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            z-index: 1;
+        }
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            padding: 10px;
+        }
+        .content div {
+            background: #c8cca596;
+            padding: 10px;
+            border: 1px solid black;
+        }
+        .content img {
+            width: 100%;
+            height: auto;
+            border: 1px solid black;
+            opacity: 1;
+        }
+        .video {
+            text-align: center;
+            padding: 2px;
+            max-width: 99%;
+            max-height: 100%;
+            border: 1px solid black;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background: #f0f0f0;
+            border: 1px solid black;
+        }
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="header">
+        <div>
+            <img src="Logotrain.jpg" alt="Logo">
+            <a href="#">RailMitra_official.com</a>
+        </div>
+        <a href="#">CONTACT: +1-8280800534</a>
+    </div>
+
+    <div class="welcome-message">
+        <h1>WELCOME TO<br> official page</h1>
+    </div>
+
+    <div class="content">
+        <div>
+            <p>The train was conceived while travel demand was increasing in the early 19th century. The era of railway transportation, led by the enormous popularity of steam locomotives, revolutionized long-distance travel. This guide takes a full look at the long-running history of train travel, from its origins in the early 1800s up to the continuing services today. Trains have shaped the transportation world in many ways. Perhaps most importantly, at the time of their introduction, they changed the economics of travel.</p>
+        </div>
+        <div>
+            <img src="TrainImage1.jpg" alt="Image 1">
+        </div>
+        <div>
+            <img src="TrainImage2.jpg" alt="Image 2">
+        </div>
+        <div>
+            <p>The Express 4000 is a modern train, initially powered by diesel engines, then electric engines for the original variants. With spacious seating, it typically accommodates 366 passengers in three travel classes. The first Express 4000 was completed in September 1968, with its first journey taking place on February 9th, 1969. Testing after this took longer and cost more than expected. There were problems with the engines, as well as an incident that damaged one of the test trains. It entered service on schedule, with National Rail operating it for the first time on January 22nd, 1970, from New York to London.</p>
+            </div>
+    </div>
+
+    <div class="video">
+        <iframe width="656" height="369"
+         src="https://www.youtube.com/embed/D2DcrKuc714" 
+         title="How India Built Its Fastest Train: Vande Bharat Express"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+        </iframe>
+        </div>
+
+    <div class="footer">
+        <p>ALL RIGHTS RESERVED</p>
+    </div>
+</div>
+</body>
+</html>
